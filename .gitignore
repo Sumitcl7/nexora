@@ -1,0 +1,12 @@
+﻿# Terraform plugin and cache
+.terraform/
+.terraform.lock.hcl
+
+# Python caches and virtual envs
+__pycache__/
+*.pyc
+venv/
+env/
+
+# artifacts
+artifacts/
