@@ -1,0 +1,20 @@
+# terraform/lambda_envs.tf
+resource "null_resource" "lambda_env_placeholder" {
+  # no-op placeholder so folder shows up in git; remove if you don't want it
+}
+
+# --- Ingest function: ensure environment block ---
+resource "aws_lambda_function" "ingest" {
+  # (keep existing fields you already have)
+  # Add or update the environment block to exactly this:
+  environment {
+    variables = {
+      EVENTS_TABLE    = aws_dynamodb_table.events.name
+      SNS_TOPIC_ARN   = aws_sns_topic.alerts.arn
+      ALERT_THRESHOLD = "100.0"
+      AWS_REGION      = var.aws_region
+    }
+  }
+
+  # keep the rest of the resource (role, filename, handler, runtime, etc.)
+}
