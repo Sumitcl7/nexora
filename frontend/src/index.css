@@ -1,0 +1,52 @@
+﻿:root {
+  --bg: #071617;
+  --card: #0b1b1b;
+  --muted: #8ca3a3;
+  --accent: #10f0c6;
+  --text: #d7efef;
+}
+[data-theme="light"] {
+  --bg: #f6fbfb;
+  --card: #ffffff;
+  --muted: #6b7b7b;
+  --accent: #0d9488;
+  --text: #0b1b1b;
+}
+*{box-sizing:border-box}
+body,html,#root{height:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial}
+
+.app-root{display:flex;min-height:100vh}
+.sidebar{
+  width:220px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
+  padding:18px; display:flex; flex-direction:column; gap:18px;
+  border-right:1px solid rgba(255,255,255,0.03);
+}
+.sidebar.collapsed{width:72px}
+.sidebar .sidebar-nav button{display:block;width:100%;padding:10px;border-radius:8px;background:transparent;color:var(--muted);border:none;text-align:left;margin-bottom:6px}
+.sidebar .sidebar-nav button.active{background:rgba(16,240,198,0.08);color:var(--accent)}
+.sidebar .collapse-btn{border:none;background:transparent;color:var(--muted);padding:6px;margin-bottom:6px;cursor:pointer}
+
+.main-content{flex:1;display:flex;flex-direction:column}
+.app-header{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-bottom:1px solid rgba(255,255,255,0.03)}
+.brand{display:flex;gap:10px;align-items:center}
+.logo-mark{width:36px;height:36px;border-radius:8px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#032; font-weight:700}
+.logo-text{font-weight:800;color:var(--accent)}
+.header-actions{display:flex;gap:8px;align-items:center}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 14px;border-radius:999px;color:var(--text);cursor:pointer}
+.btn-theme{background:transparent;border:none;color:var(--muted);cursor:pointer}
+
+.page-body{padding:24px;overflow:auto}
+.dashboard-grid{display:grid;grid-template-columns:2fr 1fr;gap:16px;align-items:start}
+.draggable-card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 4px 18px rgba(2,8,12,0.5);min-width:200px}
+.card-large{height:340px}
+.card-small{height:200px}
+
+.muted{color:var(--muted)}
+.devices-list,.alerts-list{display:flex;flex-direction:column;gap:8px}
+.device-row,.alert-row{display:flex;justify-content:space-between;padding:10px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+.alert-row.critical{border-left:4px solid #ff6b6b}
+.alert-row.warning{border-left:4px solid #ffd166}
+.alert-row.normal{border-left:4px solid #10f0c6}
+.acked{opacity:0.5}
