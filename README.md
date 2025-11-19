@@ -1,4 +1,4 @@
-# 🚀 **NEXORA – Intelligent Resource Monitoring Platform**
+#  **NEXORA – Intelligent Resource Monitoring Platform**
 
 **Real-time analytics, device insights, alerting system, and cloud-native backend.**
 **Live Demo →** [https://nexora-teal-seven.vercel.app](https://nexora-teal-seven.vercel.app)
@@ -13,8 +13,9 @@ It is built with a modern **React + Vite frontend**, serverless **AWS Lambda bac
 ---
 
 ## 📸 Screenshots
-
-*(Add your UI screenshots here later)*
+<img width="1910" height="946" alt="image" src="https://github.com/user-attachments/assets/31888e94-8676-4384-9aaf-db9581832626" />
+<img width="1912" height="886" alt="image" src="https://github.com/user-attachments/assets/81163b37-b78e-4054-9616-aa440a87b125" />
+<img width="1919" height="868" alt="image" src="https://github.com/user-attachments/assets/b652b485-7645-45ff-9512-5ac276684fa3" />
 
 ```
 /screenshots
